@@ -1,0 +1,214 @@
+.body{
+  overflow: hidden;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.switch{
+  position: fixed;
+  display: inline-block;
+  width: 58px;
+  height: 32px;
+  margin: 5px 30px;
+}
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: #7F7CAF;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #ffeeff;
+  transition: .4s;
+  border-radius: 50%;
+}
+input{
+  display: none;
+}
+input:checked + .slider:before{
+  background-color: #181930;
+  transform: translateX(25px);
+}
+.top-light{
+  background-color: #eeeeff;
+  background-image: url('./img/light\ brick.jpg'); 
+}
+.top-dark{
+  background-color: #210b2c;
+  background-image: url('./img/dark\ brick.jpg');
+}
+section{
+  min-height: 670px;
+}
+.home{
+  display: flex;
+}
+.top-left-light{
+  background-image: url('./img/2312989.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+}
+.top-left-dark{
+  background-image: url('./img/unnamed-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-top: 30px;
+  background-size: cover;
+}
+.top-right-light{
+  width: 100%;
+  padding: 10px 30px;
+  display: grid;
+}
+.top-right-dark{
+  width: 100%;
+  padding: 10px 30px;
+}
+.nav{
+display: grid;
+  padding: 10px 30px;
+  justify-content: center;
+}
+.top-last-dark .btn, .work-left-dark .btn, .abcon-dark .btn, .contact-dark .btn{
+  color:#ffd2e9;
+}
+.top-last-dark .btn:hover, .work-left-dark .btn:hover, .abcon-dark .btn:hover, .contact-dark .btn:hover{
+  background-color: #220531;
+  box-shadow: 2px 2px 10px  #ffd2e9;
+}
+a{
+  text-decoration: none;
+}
+.btn{
+  width: 100px;
+  margin-bottom: 20px;
+  background-color: transparent;
+  border-radius: 34px;
+  font-weight: 500;
+  padding: 10px;
+}
+.btn:hover{
+  background-color: #ffd2e9;
+  box-shadow: 2px 2px 10px #220531;
+}
+
+.wel{
+  display: flex;
+  margin-top: 50px;
+}
+.welc{
+  font-size: 100px;
+  margin: 50px 50px 20px 0;
+  text-shadow: 5px 5px 10px #181930;
+}
+.dark{
+  color:  #ffd2e9;
+  text-shadow:5px 5px 10px violet;
+
+}
+.welcome-light{
+  background-image: url('./img/lightsmile.png');
+ height: 100px;
+ width: 100px;
+ background-size: 100%;
+ margin-top: 70px;
+}
+.welcome-dark{
+  background-image: url('./img/darksmile.png');
+  height: 100px;
+ width: 100px;
+ background-size: 100%;
+ margin-top: 85px;
+ background-repeat: no-repeat;
+}
+#work, #abcon{
+  display: flex;
+  padding: 50px;
+}
+#work .nav, .abcon-light .nav, .abcon-dark .nav{
+  margin-top: 100px;
+  
+}
+.footer{
+  background-color: black;
+  color: #ffd2e9;
+  text-align: center;
+ position: fixed;
+ bottom: 0;
+ width: 100%;
+}
+.sites{
+ display: grid;
+ grid-template-columns: auto auto;
+}
+.site{
+  margin: 60px 80px 10px 0;
+}
+h3, p, h1, h5, .abcont-light a{
+  color: #220531;
+  text-shadow: 2px 2px 10px  #220531;
+}
+.work-right-dark h3, .work-right-dark p, .abcont-dark h5, .abcont-dark h1, .abcont-dark a{
+  color: #ffd2e9;
+  text-shadow: 2px 2px 10px #ffd2e9;
+}
+#about h1, #contact h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.abcont-light, .abcont-dark{
+  display: flex;
+  margin-top: 40px;
+}
+#about{
+  width: 60%;
+  margin-right: 10%;
+  padding: 50px;
+}
+#contact{
+  display: flex;
+  padding: 50px;
+}
+#contact .nav{
+  display: none;
+}
+.co h5{
+  margin: 20px;
+}
+@media screen and (max-width: 800px){
+  .welc{font-size: 70px; margin-right: 20px}
+  .welcome-light{height: 60px; width: 60px;}
+  .welcome-dark{margin-top: 60px;}
+  .nav{width: 100px;}
+  .site{margin-top: 20px;}
+  .abcont-dark, .abcont-light{display: grid; margin-top: 20px;}
+  #about{width: 100%; margin: 50px 50px 100px 0;}
+  #contact .nav{display: block; position: absolute; left: 0; margin-top: 100px;}
+  #contact{margin-top: 80px;}
+  .abcon-dark, .abcon-light{margin-top: 100px;}
+}
+@media screen and (max-device-width: 400px){
+  .top-left-dark{background-size: 350% 100%}
+  .welc{font-size: 40px; margin-bottom: 0;}
+  .wel{display: grid;}
+  .welcome-dark, .welcome-light{margin: auto;}
+  .h{font-size: 20px;}
+  #work, #abcon, #about, #contact, #contact .nav{padding: 0;}
+  .sites{grid-template-columns: auto;}
+  #about, .co{width: auto; padding-right: 80px;}
+.long{font-size: 15px;}
+
+}
